@@ -1,0 +1,13 @@
+<h3>Top animals</h3>
+<div class="grid grid-pad">
+    <div *ngFor="let animal of animals" [routerLink]="['/detail', animal.id]" class="col-1-5">
+        <div class="module animal">
+            <img src="{{animal.src}}">
+            <!--<h4>{{animal.name}}</h4>-->
+        </div>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/>
+<div>
+    <animal-search></animal-search>
+</div>

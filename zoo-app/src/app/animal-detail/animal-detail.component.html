@@ -1,0 +1,40 @@
+<div *ngIf="animal">
+    <h2>{{animal.name}} details</h2>
+    <div>
+        <label>Name: </label>
+        <input [(ngModel)]="animal.name" placeholder="name" />
+    </div>
+    <div>
+        <label>Height (cm): </label>
+        <input [(ngModel)]="animal.height" placeholder="height" />
+    </div>
+    <div>
+        <label>Weight (kg): </label>
+        <input [(ngModel)]="animal.weight" placeholder="weight" />
+    </div>
+    <div>
+        <label>Desc: </label>
+        <input [(ngModel)]="animal.desc" placeholder="desc" />
+    </div>
+    <div>
+        <label>Quantity: </label>
+        <input [(ngModel)]="animal.count" placeholder="count" />
+    </div>
+    <div>
+        <label>Image Url: </label>
+        <input [(ngModel)]="animal.src" placeholder="src" />
+    </div>
+    <div>
+        <label>Class: </label>
+        <select name="classSelect" id="classSelect" [(ngModel)]="animal.class">
+            <option value="land predator">land predator</option>
+            <option value="land prey">land prey</option>
+            <option value="water predator">water predator</option>
+            <option value="water prey">water prey</option>
+            <option value="air predator">air predator</option>
+            <option value="air prey">air prey</option>
+        </select>
+    </div>
+    <button (click)="goBack()">Back</button>
+    <button (click)="save()">Save</button>
+</div>
